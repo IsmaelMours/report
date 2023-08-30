@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Ismael User",
+      "email": "ismael@gmail.com",
+      "password": "12345",
+      "contactNumber": "0730662651"
+    },
+    {
+      "id": 2,
+      "fullName": "Skilly User",
+      "email": "skilly@gmail.com",
+      "password": "1234",
+      "contactNumber": "0123654"
+    },
+    {
+      "id": 3,
+      "fullName": "Sk User",
+      "email": "sk@gmail.com",
+      "password": "12345",
+      "contactNumber": "01245882626262"
+    },
+    {
+      "id": 4,
+      "fullName": "Sk Yaah",
+      "email": "sk@yaah.com",
+      "password": "2222",
+      "contactNumber": "1200022"
+    },
+    {
+      "id": 5,
+      "fullName": "Motshabi User",
+      "email": "motshabi@gmail.com",
+      "password": "754559",
+      "contactNumber": "074526624"
+    },
+    {
+      "fullName": "Tshego Motshabi",
+      "email": "tshego@gmail.com",
+      "password": "123456",
+      "contactNumber": "0810059390",
+      "id": 6
+    },
+    {
+      "fullName": "ismael Robert",
+      "email": "irob@yahoo.com",
+      "password": "12345",
+      "contactNumber": "0123654",
+      "id": 7
+    }
+  ]
+}
