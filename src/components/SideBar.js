@@ -13,13 +13,13 @@ const SideBar = ({ text, children }) => {
 
     const linkStyle = {
         textDecoration: 'none',
-        color: 'inherit',
-        fontSize: "19px",
+        color: '#6D40BF',
+        fontSize: "18px",
         fontWeight: "bold"
     };
 
     const sidebarStyle = {
-        backgroundColor: '#0C1729',
+        backgroundColor: '#DCD6E7',
         height: '100vh'
     };
 
@@ -28,7 +28,7 @@ const SideBar = ({ text, children }) => {
           <Sidebar style={sidebarStyle}>
               <Menu>
                   <MenuItem
-                      icon={<MenuOutlinedIcon />}
+                      icon={<MenuOutlinedIcon  style={linkStyle} />}
                       onClick={() => {
                           collapseSidebar();
                           setIsSidebarCollapsed(!isSidebarCollapsed);
@@ -49,7 +49,7 @@ const SideBar = ({ text, children }) => {
                       <Link to="/about" style={linkStyle}>
                           <MenuItem icon={<InfoIcon />}>About </MenuItem>
                       </Link>
-                      <SubMenu title="Modules" icon={<ViewModuleIcon />}> 
+                      <SubMenu title="Modules" icon={<ViewModuleIcon />} style={linkStyle}> 
                        
                           {/* Add more module links here */}
                           <MenuItem>
