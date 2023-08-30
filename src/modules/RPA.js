@@ -1,13 +1,12 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
-
-
-const Dashboard = () => {
+const RPA = () => {
   return (
     <div>
-       <SideBar/>
-    </div>
+   <SideBar text = 'RPA'/>
+    
+        </div>
   )
 }
 
-export default Dashboard
+export default RPA

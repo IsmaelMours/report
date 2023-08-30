@@ -1,13 +1,12 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
-
-
-const Dashboard = () => {
+const Python = () => {
   return (
     <div>
-       <SideBar/>
-    </div>
+    <SideBar text = 'Python'/>
+    
+        </div>
   )
 }
 
-export default Dashboard
+export default Python

@@ -1,13 +1,13 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
 
-
-const Dashboard = () => {
+const PowerBI = () => {
   return (
     <div>
-       <SideBar/>
+<SideBar text = 'Power BI'/>
+
     </div>
   )
 }
 
-export default Dashboard
+export default PowerBI

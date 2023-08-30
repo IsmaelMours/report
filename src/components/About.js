@@ -1,13 +1,13 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
 
-
-const Dashboard = () => {
+const About = () => {
   return (
     <div>
-       <SideBar/>
+<SideBar/>
+
     </div>
   )
 }
 
-export default Dashboard
+export default About

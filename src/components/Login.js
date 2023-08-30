@@ -54,7 +54,7 @@ const Login = ({onLoginSuccess}) => { // Pass a callback prop to handle successf
   
 
   return (
-    <div className="form-container">
+    <div className="form-container2">
       <form onSubmit={handleSubmit}>
         <h2>Login</h2>
         <div className="form-group">

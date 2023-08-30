@@ -1,13 +1,12 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
-
-
-const Dashboard = () => {
+const SQL = () => {
   return (
     <div>
-       <SideBar/>
-    </div>
+  <SideBar text = 'SQL'/>
+    
+        </div>
   )
 }
 
-export default Dashboard
+export default SQL
