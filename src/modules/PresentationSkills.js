@@ -1,6 +1,7 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
 import PresentationContent from '../components/PresentationContent'
+
 const PresentationSkills = () => {
   return (
     <div>

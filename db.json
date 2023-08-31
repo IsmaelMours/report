@@ -1,12 +1,6 @@
 {
   "users": [
-    {
-      "id": 1,
-      "fullName": "Ismael User",
-      "email": "ismael@gmail.com",
-      "password": "12345",
-      "contactNumber": "0730662651"
-    },
+   
     {
       "id": 2,
       "fullName": "Skilly User",
@@ -36,18 +30,21 @@
       "contactNumber": "074526624"
     },
     {
-      "fullName": "Tshego Motshabi",
-      "email": "tshego@gmail.com",
-      "password": "123456",
-      "contactNumber": "0810059390",
-      "id": 6
-    },
-    {
       "fullName": "ismael Robert",
       "email": "irob@yahoo.com",
       "password": "12345",
       "contactNumber": "0123654",
       "id": 7
     }
+  ],
+  "admins": [
+    {
+      "id": 1,
+      "fullName": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "contactNumber": "1234567890"
+    }
+    
   ]
 }

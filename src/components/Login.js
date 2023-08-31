@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import {  toast } from 'react-toastify';
-
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
-
-const Login = ({onLoginSuccess}) => { // Pass a callback prop to handle successful login
+const Login = ({ onLoginSuccess }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -20,23 +16,40 @@ const Login = ({onLoginSuccess}) => { // Pass a callback prop to handle successf
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+  
     try {
-      const response = await fetch('http://localhost:3001/users'); // Assuming your json-server is running on port 3001
-      const users = await response.json();
-
-      const user = users.find((user) => user.email === email && user.password === password);
-
+      const response = await fetch('http://localhost:3001/users');
+      const response2 = await fetch('http://localhost:3001/admins');
+  
+      if (!response.ok || !response2.ok) {
+        throw new Error('Failed to fetch data');
+      }
+  
+      const userData = await response.json();
+      const adminData = await response2.json();
+  
+      console.log('User data:', userData);
+      console.log('Admin data:', adminData);
+  
+      const user = userData.find(
+        (user) => user.email === email && user.password === password
+      );
+      const admin = adminData.find(
+        (admin) => admin.email === email && admin.password === password
+      );
+  
       if (user) {
-        // Simulate setting user data in local storage after successful login
         localStorage.setItem('userData', JSON.stringify(user));
-
-        // Call the onLogin callback to trigger redirection in the parent component
-       
-        window.location.href = '/user';
-        // Display a toast notification
+        window.location.href = '/dashboard';
         onLoginSuccess(user.email);
         toast.success('Logged in successfully!', {
+          position: toast.POSITION.TOP_CENTER,
+        });
+      } else if (admin) {
+        localStorage.setItem('adminData', JSON.stringify(admin));
+        window.location.href = '/admin';
+        onLoginSuccess(admin.email);
+        toast.success('Admin logged in successfully!', {
           position: toast.POSITION.TOP_CENTER,
         });
       } else {
@@ -59,21 +72,11 @@ const Login = ({onLoginSuccess}) => { // Pass a callback prop to handle successf
         <h2>Login</h2>
         <div className="form-group">
           <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={handleEmailChange}
-            required
-          />
+          <input type="email" value={email} onChange={handleEmailChange} required />
         </div>
         <div className="form-group">
           <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={handlePasswordChange}
-            required
-          />
+          <input type="password" value={password} onChange={handlePasswordChange} required />
         </div>
         <div className="button-container">
           <button type="submit">Login</button>
@@ -82,7 +85,5 @@ const Login = ({onLoginSuccess}) => { // Pass a callback prop to handle successf
     </div>
   );
 };
-
-
 
 export default Login;
