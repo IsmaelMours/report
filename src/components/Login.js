@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Login = ({ onLoginSuccess }) => {
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -16,40 +16,20 @@ const Login = ({ onLoginSuccess }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+
     try {
-      const response = await fetch('http://localhost:3001/users');
-      const response2 = await fetch('http://localhost:3001/admins');
-  
-      if (!response.ok || !response2.ok) {
-        throw new Error('Failed to fetch data');
-      }
-  
-      const userData = await response.json();
-      const adminData = await response2.json();
-  
-      console.log('User data:', userData);
-      console.log('Admin data:', adminData);
-  
-      const user = userData.find(
-        (user) => user.email === email && user.password === password
-      );
-      const admin = adminData.find(
-        (admin) => admin.email === email && admin.password === password
-      );
-  
-      if (user) {
-        localStorage.setItem('userData', JSON.stringify(user));
-        window.location.href = '/dashboard';
-        onLoginSuccess(user.email);
+      // Perform your login/authentication logic here.
+      // For this example, we'll simulate a successful login.
+      if (email === 'motshabielizabeth1@gmail.com' && password === 'Motshabi#2001') {
+        // Simulate a delay before redirecting
+        setTimeout(() => {
+          // Redirect to the dashboard
+          window.location.href = '/dashboard';
+          // You can also call the onLoginSuccess function if needed
+        
+        }, 1000); // 1 second delay for demonstration
+
         toast.success('Logged in successfully!', {
-          position: toast.POSITION.TOP_CENTER,
-        });
-      } else if (admin) {
-        localStorage.setItem('adminData', JSON.stringify(admin));
-        window.location.href = '/admin';
-        onLoginSuccess(admin.email);
-        toast.success('Admin logged in successfully!', {
           position: toast.POSITION.TOP_CENTER,
         });
       } else {
@@ -64,7 +44,6 @@ const Login = ({ onLoginSuccess }) => {
       });
     }
   };
-  
 
   return (
     <div className="form-container2">

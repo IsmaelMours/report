@@ -52,8 +52,11 @@ const ProjectContent = () => {
             Creating a thorough project plan helps ensure that all team members are aligned and aware of
             project goals and expectations.
           </Typography>
+          <a href="https://clickup.com/" target="_blank" rel="noopener noreferrer">
+            <button>Go to ClickUp</button>
+          </a>
         </Container>
       );
 }
 
-export default ProjectContent
+export default ProjectContent;
