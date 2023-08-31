@@ -1,10 +1,14 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
+import AboutContent from './AboutContent'
+
 
 const About = () => {
   return (
     <div>
-<SideBar/>
+<SideBar text='About'>
+<AboutContent/>
+</SideBar>
 
     </div>
   )
