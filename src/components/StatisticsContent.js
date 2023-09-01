@@ -21,39 +21,31 @@ const ListItemStyled = styled(ListItem)({
 });
 
 const StatisticsContent = () => {
-    return (
-        <Container>
-          <SectionTitle variant="h5">Statistics Basics</SectionTitle>
-          <Typography variant="body1">
-            Statistics is the study of data collection, analysis, interpretation, and presentation.
-            Here are some key concepts in statistics:
-          </Typography>
-          <List>
-            <ListItemStyled>
-              <ListItemText primary="Descriptive vs. Inferential Statistics" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Measures of Central Tendency" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Measures of Dispersion" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Probability Distributions" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Hypothesis Testing" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Correlation and Regression" />
-            </ListItemStyled>
-          </List>
-          <Typography variant="body1">
-            Understanding statistics is essential for making informed decisions and drawing meaningful
-            conclusions from data.
-          </Typography>
-        </Container>
-      );
-}
+  // URL to the certificate on Google Drive
+  const certificateUrl = 'https://drive.google.com/file/d/1J0vyK4gaPm4bHyTXFq3nJ4PbINAsb85X/view?usp=sharing';
 
-export default StatisticsContent
+  return (
+    <Container>
+      <SectionTitle variant="h5">Statistics Basics</SectionTitle>
+      <Typography variant="body1">
+        Statistics is the study of data collection, analysis, interpretation, and presentation.
+        Here are some key concepts in statistics:
+      </Typography>
+      <List>
+        <ListItemStyled>
+          <ListItemText primary="Descriptive vs. Inferential Statistics" />
+        </ListItemStyled>
+        {/* Add other list items as needed */}
+      </List>
+      <Typography variant="body1">
+        Understanding statistics is essential for making informed decisions and drawing meaningful
+        conclusions from data.
+      </Typography>
+      <a href={certificateUrl} target="_blank" rel="noopener noreferrer">
+        View Certificate
+      </a>
+    </Container>
+  );
+};
+
+export default StatisticsContent;

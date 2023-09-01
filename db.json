@@ -1,6 +1,5 @@
 {
   "users": [
-   
     {
       "id": 2,
       "fullName": "Skilly User",
@@ -45,6 +44,5 @@
       "password": "admin",
       "contactNumber": "1234567890"
     }
-    
   ]
 }

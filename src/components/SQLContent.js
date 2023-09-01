@@ -21,38 +21,30 @@ const ListItemStyled = styled(ListItem)({
 });
 
 const SQLContent = () => {
-    return (
-        <Container>
-          <SectionTitle variant="h5">SQL Fundamentals</SectionTitle>
-          <Typography variant="body1">
-            Structured Query Language (SQL) is a powerful tool for managing and querying databases.
-            Here are some key SQL concepts to understand:
-          </Typography>
-          <List>
-            <ListItemStyled>
-              <ListItemText primary="SELECT Statements" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Filters and Conditions" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Joins" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Aggregate Functions" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Subqueries" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Normalization" />
-            </ListItemStyled>
-          </List>
-          <Typography variant="body1">
-            Mastering SQL fundamentals is essential for working with databases and data manipulation.
-          </Typography>
-        </Container>
-      );
-}
+  // URL to the SQL file on Google Drive
+  const sqlUrl = 'https://drive.google.com/file/d/1-beOZtdLwBMLUPkeVSwBeHeQzyTxnvSk/view?usp=sharing';
 
-export default SQLContent
+  return (
+    <Container>
+      <SectionTitle variant="h5">SQL Fundamentals</SectionTitle>
+      <Typography variant="body1">
+        Structured Query Language (SQL) is a powerful tool for managing and querying databases.
+        Here are some key SQL concepts to understand:
+      </Typography>
+      <List>
+        <ListItemStyled>
+          <ListItemText primary="SELECT Statements" />
+        </ListItemStyled>
+        {/* Add other list items as needed */}
+      </List>
+      <Typography variant="body1">
+        Mastering SQL fundamentals is essential for working with databases and data manipulation.
+      </Typography>
+      <a href={sqlUrl} target="_blank" rel="noopener noreferrer">
+        View SQL File
+      </a>
+    </Container>
+  );
+};
+
+export default SQLContent;

@@ -21,39 +21,31 @@ const ListItemStyled = styled(ListItem)({
 });
 
 const PowerBIContent = () => {
-    return (
-        <Container>
-          <SectionTitle variant="h5">Introduction to Power BI</SectionTitle>
-          <Typography variant="body1">
-            Power BI is a powerful business analytics tool by Microsoft. Here are some key concepts to
-            get started with Power BI:
-          </Typography>
-          <List>
-            <ListItemStyled>
-              <ListItemText primary="Data Sources and Data Transformation" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Data Modeling" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Creating Visualizations" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Interactive Reports and Dashboards" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Sharing and Collaboration" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="DAX Expressions" />
-            </ListItemStyled>
-          </List>
-          <Typography variant="body1">
-            Mastering Power BI allows you to turn data into meaningful insights and drive informed
-            business decisions.
-          </Typography>
-        </Container>
-      );
-}
+  // URL to the Power BI file on Google Drive
+  const powerBiUrl = 'https://drive.google.com/file/d/1myUsj1_m3LwIWn-LqjAuhxawuaPNn95-/view?usp=sharing';
 
-export default PowerBIContent
+  return (
+    <Container>
+      <SectionTitle variant="h5">Introduction to Power BI</SectionTitle>
+      <Typography variant="body1">
+        Power BI is a powerful business analytics tool by Microsoft. Here are some key concepts to
+        get started with Power BI:
+      </Typography>
+      <List>
+        <ListItemStyled>
+          <ListItemText primary="Data Sources and Data Transformation" />
+        </ListItemStyled>
+        {/* Add other list items as needed */}
+      </List>
+      <Typography variant="body1">
+        Mastering Power BI allows you to turn data into meaningful insights and drive informed
+        business decisions.
+      </Typography>
+      <a href={powerBiUrl} target="_blank" rel="noopener noreferrer">
+        View Power BI File
+      </a>
+    </Container>
+  );
+};
+
+export default PowerBIContent;

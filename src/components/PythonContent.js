@@ -21,38 +21,30 @@ const ListItemStyled = styled(ListItem)({
 });
 
 const PythonContent = () => {
-    return (
-        <Container>
-          <SectionTitle variant="h5">Introduction to Python</SectionTitle>
-          <Typography variant="body1">
-            Python is a versatile and widely-used programming language. Here are some key concepts to
-            get started with Python:
-          </Typography>
-          <List>
-            <ListItemStyled>
-              <ListItemText primary="Variables and Data Types" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Control Flow (if statements, loops)" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Functions and Modules" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Data Structures (lists, dictionaries)" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="File Handling" />
-            </ListItemStyled>
-            <ListItemStyled>
-              <ListItemText primary="Exception Handling" />
-            </ListItemStyled>
-          </List>
-          <Typography variant="body1">
-            Learning Python provides a strong foundation for various programming tasks and applications.
-          </Typography>
-        </Container>
-      );
-}
+  // URL to the Python file on Google Drive
+  const pythonUrl = 'https://drive.google.com/file/d/1Optu5ENkvlf74hggqlDuAU4ket6B1NvU/view?usp=sharing';
 
-export default PythonContent
+  return (
+    <Container>
+      <SectionTitle variant="h5">Introduction to Python</SectionTitle>
+      <Typography variant="body1">
+        Python is a versatile and widely-used programming language. Here are some key concepts to
+        get started with Python:
+      </Typography>
+      <List>
+        <ListItemStyled>
+          <ListItemText primary="Variables and Data Types" />
+        </ListItemStyled>
+        {/* Add other list items as needed */}
+      </List>
+      <Typography variant="body1">
+        Learning Python provides a strong foundation for various programming tasks and applications.
+      </Typography>
+      <a href={pythonUrl} target="_blank" rel="noopener noreferrer">
+        View Python File
+      </a>
+    </Container>
+  );
+};
+
+export default PythonContent;
